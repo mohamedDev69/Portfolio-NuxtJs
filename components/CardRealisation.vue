@@ -1,0 +1,52 @@
+<script setup>
+
+import { defineProps } from 'vue';
+
+const props = defineProps ({
+    imgSrc: {
+      type: String,
+      required: true
+    },
+    imgAlt: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    },
+    href: {
+      type: String,
+      required: true
+    },
+    target: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    }
+})
+</script>
+
+<template>
+  <div class="block">
+    <h3 class="font-bold text-gold-200 lg:text-2xl text-xl">Type : {{ props.type }} </h3>
+    <div class="mt-6">
+      <div class="overflow-hidden aspect-w-16 aspect-h-9 ">
+        <a :target="props.target" :href="props.href">
+          <img :src="imgSrc" :alt="props.imgAlt" class="2xl:w-[350px] md:w-[300px] w-[200px] rounded-lg hover:rounded-lg transition ease-in-out hover:scale-110 duration-700" >
+        </a>
+      </div>
+    </div>
+    <div class="mt-10" id="description" data-aos="fade-left" data-aos-duration="1500">
+      <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px]">Description : </h4>
+      <p class="text-white mt-6 leading-7 w-[450px] text-left sm:text-[14px] text-[12px]" v-html="props.description"></p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+
+</style>
