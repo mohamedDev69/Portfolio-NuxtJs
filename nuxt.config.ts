@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    'nuxt-aos'
+    'nuxt-aos',
   ],
   plugins : [
     '~/plugins/aos.client.js',

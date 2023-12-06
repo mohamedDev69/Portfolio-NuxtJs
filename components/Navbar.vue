@@ -100,7 +100,7 @@ export default {
         </a>
       </div>
       <div class="xl:flex hidden justify-end" >
-        <div class="block mt-[-10px]">
+        <div class="block mt-[-10px]" data-aos="fade-bottom" data-aos-duration="1500">
           <img class="w-12 r ml-8"  src="/img/icones-prestation/arrow.png" alt="Arrow Icon">
           <p class="text-[18px] text-gold-200 font-bold">N'hésitez pas</p>
         </div>

@@ -1,6 +1,5 @@
 <script setup>
 
-import { defineProps } from 'vue';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const props = defineProps( {
@@ -30,7 +29,7 @@ const props = defineProps( {
       <ul class="text-white 2xl:text-[14px] xl:text-[13px] md:text-[12px] text-sm list-disc space-y-12 leading-normal">
         <li v-for="item in props.listItems" :key="item">
           <font-awesome-icon :icon="item.icon" class="text-[17px] mx-1 text-gold-200" />
-          <font-awesome-icon :icon="item.icon2" class="text-[17px] mx-1 text-gold-200" />
+          <font-awesome-icon v-if="item.icon2" :icon="item.icon2" class="text-[17px] mx-1 text-gold-200" />
           {{ item.text }}
         </li>
       </ul>

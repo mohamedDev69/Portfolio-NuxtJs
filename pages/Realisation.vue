@@ -1,8 +1,7 @@
 <script setup>
 
 import Navbar from "@/components/Navbar.vue";
-
-import CardRealisation from "@/components/CardRealisation.vue";
+import CardRealisation from '@/components/CardRealisation.vue';
 
 
 
@@ -20,41 +19,58 @@ import CardRealisation from "@/components/CardRealisation.vue";
   <div class="flex mt-16 ml-6 " data-aos="fade-up" data-aos-duration="1000">
 
       <!-- Réalisation -->
+    <Swiper
+        :modules="[SwiperAutoplay, SwiperEffectCreative,SwiperPagination]"
+        :slides-per-view="1"
+        :loop="true"
+        :effect="'creative'"
+        :autoplay="{
+      delay: 8000,
+      disableOnInteraction: true,
+    }"
+        :creative-effect="{
+      prev: {
+        shadow: false,
+        translate: ['-20%', 0, -1],
+      },
+      next: {
+        translate: ['100%', 0, 0],
+      },
+    }
+"
+    >
+      <SwiperSlide>
+        <card-realisation
+            type="Projet Professionel"
+            img-src="/img/carousel-picture/crm-picture.jpg"
+            img-alt="Image d'une CRM (Custom Relationship Manager)"
+            href="#"
+            target=""
+            description="Durant mon alternance, je travaille sur l'amélioration d'une CRM..."
+        ></card-realisation>
+      </SwiperSlide>
+      <SwiperSlide>
+        <card-realisation
+            type="Projet Scolaire"
+            img-src="/img/carousel-picture/Frame%203.2.png"
+            img-alt="Image pour les grands écrans"
+            href="https://emmapierre.netlify.app/view/"
+            target="_blank"
+            description="Pour ce projet scolaire, j'ai collaboré à la création d'un site web..."
+        ></card-realisation>
+      </SwiperSlide>
+      <SwiperSlide>
+        <card-realisation
+            type="Futur projet"
+            img-src="/img/carousel-picture/prochainement.png"
+            img-alt="Image avec le mot prochainement en son centre"
+            href="#"
+            target=""
+            description=""
+        ></card-realisation>
+      </SwiperSlide>
 
-          <card-realisation
-              type="Projet Professionel"
-              img-src="/img/carousel-picture/crm-picture.jpg"
-              img-alt="Image d'une CRM (Custom Relationship Manager) "
-              href="#"
-              target=""
-              description="Durant mon alternance, je travaille sur l'amélioration d'une CRM, en me concentrant sur l'optimisation des performances, l'analyse des KPI, la comptabilité...
-              Mon rôle consiste à intégrer un framework plus efficace et à développer de nouvelles fonctionnalités, améliorant ainsi l'efficacité de la CRM.
-              Cette expérience enrichit mes compétences en programmation et en gestion de projet, tout en me fournissant une compréhension approfondie des besoins commerciaux et techniques en milieu professionnel."
-          ></card-realisation>
-
-          <card-realisation type="Projet Scolaire"
-                            img-src="/img/carousel-picture/Frame%203.2.png"
-                            img-alt="Image pour les grands écrans"
-                            href="https://emmapierre.netlify.app/view/"
-                            target="_blank"
-                            description="Pour ce projet scolaire,
-                            j'ai collaboré à la création d'un site web pour une entreprise de création de bijoux.
-                            Le design est moderne et élégant, la navigation est intuitive, et la présentation des produits est soignée.
-                            Réalisé en HTML, CSS, JavaScript, et Tailwind pour assurer sa compatibilité sur différents appareils.
-                            Une expérience enrichissante d'apprentissage et de travail d'équipe dans un contexte professionnel."
-          >
-          </card-realisation>
-
-
-
-          <card-realisation type="Futur projet"
-                            img-src="/img/carousel-picture/prochainement.png"
-                            img-alt="Image avec le mot prochainemen en son centre"
-                            href="#"
-                            target=""
-                            description="">
-          </card-realisation>
-
+    </Swiper>
 
     </div>
 

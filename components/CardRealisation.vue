@@ -1,7 +1,5 @@
 <script setup>
 
-import { defineProps } from 'vue';
-
 const props = defineProps ({
     imgSrc: {
       type: String,
@@ -36,7 +34,7 @@ const props = defineProps ({
     <div class="mt-6">
       <div class="overflow-hidden aspect-w-16 aspect-h-9 ">
         <a :target="props.target" :href="props.href">
-          <img :src="imgSrc" :alt="props.imgAlt" class="2xl:w-[350px] md:w-[300px] w-[200px] rounded-lg hover:rounded-lg transition ease-in-out hover:scale-110 duration-700" >
+          <img :src="imgSrc" :alt="props.imgAlt" class="2xl:w-[350px] md:w-[280px] w-[200px] rounded-lg hover:rounded-lg transition ease-in-out hover:scale-110 duration-700" >
         </a>
       </div>
     </div>
