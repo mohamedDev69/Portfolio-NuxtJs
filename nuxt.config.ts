@@ -34,6 +34,7 @@ export default defineNuxtConfig({
   plugins : [
     '~/plugins/aos.client.js',
     '~/plugins/fontawesome.js',
+    '~/plugins/splide.js',
   ],
 
 

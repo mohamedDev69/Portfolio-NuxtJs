@@ -8,7 +8,8 @@ config.autoAddCss = false
 
 // You can add your icons directly in this plugin. See other examples for how you
 // can add other styles or just individual icons.
-library.add(fas)
+import { faPalette, faPenToSquare,faComments, faDesktop, faMobileScreen,faTachometerAlt,faPuzzlePiece,faSearch,faTools,faSyncAlt,faServer   } from '@fortawesome/free-solid-svg-icons';
+library.add(faPalette,faPenToSquare, faComments, faDesktop, faMobileScreen,faTachometerAlt,faPuzzlePiece,faSearch,faTools,faSyncAlt,faServer );
 
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon, {})

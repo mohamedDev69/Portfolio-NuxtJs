@@ -29,7 +29,7 @@ const props = defineProps ({
 </script>
 
 <template>
-  <div class="block">
+  <div class="flex flex-col xl:items-start items-center xl:justify-start justify-center">
     <h3 class="font-bold text-gold-200 lg:text-2xl text-xl">Type : {{ props.type }} </h3>
     <div class="mt-6">
       <div class="overflow-hidden aspect-w-16 aspect-h-9 ">
@@ -38,8 +38,8 @@ const props = defineProps ({
         </a>
       </div>
     </div>
-    <div class="mt-10" id="description" data-aos="fade-left" data-aos-duration="1500">
-      <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px]">Description : </h4>
+    <div class="mt-10">
+      <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px] xl:text-left text-center">Description : </h4>
       <p class="text-white mt-6 leading-7 w-[450px] text-left sm:text-[14px] text-[12px]" v-html="props.description"></p>
     </div>
   </div>

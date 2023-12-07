@@ -43,7 +43,7 @@ const handleSubmit = async () => {
 
   <div class="container">
 
-    <section data-aos="fade-down" data-aos-duration="1000" class="2xl:mt-20 xl:mt-0 sm:mt-16 mt-6 flex lg:flex-row flex-col lg:gap-5 gap-10 items-center ">
+    <section data-aos="fade-down" data-aos-duration="750" class="2xl:mt-20 xl:mt-0 sm:mt-16 mt-6 flex lg:flex-row flex-col lg:gap-5 gap-10 items-center ">
 
       <div class="bg-gold-200 rounded-lg text-black-100 p-10 font-semibold space-y-3 sm:w-[550px] w-[400px] ">
 
