@@ -10,7 +10,7 @@
       <div class="2xl:mt-32 xl:mt-8">
         <div class="flex xl:justify-between xl:flex-row justify-center flex-col 2xl:mx-0 mx-4">
           <div class="xl:text-left text-center xl:mx-0" >
-            <h1 class="2xl:text-7xl xl:text-5xl text-[38px]  font-bold text-gold-200 md:mt-[60px] sm:mt-[80px] mt-[50px] info" >Développeur Web</h1>
+            <h1 class="2xl:text-7xl xl:text-5xl text-[38px] font-bold text-gold-200 md:mt-[60px] sm:mt-[80px] mt-[50px] info" >Développeur Web</h1>
             <h2 class="text-white mt-[50px] leading-8 2xl:text-2xl xl:text-1xl lg:text-[20px] text-[18px] ">
               Transformez votre idée en un site web exceptionnel <br>  avec mon expertise  en développement web et création d'applications ! 🌐💡
             </h2>
