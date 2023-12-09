@@ -38,9 +38,9 @@ const props = defineProps ({
         </a>
       </div>
     </div>
-    <div class="mt-10">
+    <div class="mt-16">
       <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px] xl:text-left text-center">Description : </h4>
-      <p class="text-white mt-6 leading-7 w-[450px] text-left sm:text-[14px] text-[12px]" v-html="props.description"></p>
+      <p class="text-white mt-6 leading-7 w-[450px] xl:text-left text-center sm:text-[14px] text-[12px]" v-html="props.description"></p>
     </div>
   </div>
 </template>

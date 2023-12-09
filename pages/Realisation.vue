@@ -136,13 +136,15 @@ onUnmounted(() => {
 
 </template>
 
-<style scoped>
-/* Styliser les flèches de navigation */
-.splide__arrow {
-  background-color: #ffffff; /* Fond blanc pour les flèches */
-  color: #000000; /* Couleur de l'icône */
-  border-radius: 50%; /* Rend les flèches circulaires */
-  padding: 10px; /* Espacement autour de l'icône */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+<style>
+
+.splide__arrow svg {
+  fill: #31333b !important;
+
 }
+
+.splide__arrow {
+  background-color: #f0bf6c;
+}
+
 </style>

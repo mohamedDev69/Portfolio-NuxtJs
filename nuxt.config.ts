@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    secret : process.env.NUXT_API_KEY,
+  },
   app: {
     head: {
       charset: 'utf-8',
@@ -11,7 +14,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'En tant que développeur web freelance, je crée des sites et applis sur mesure pour concrétiser vos idées en ligne.' },
+        { name: 'description', content: 'En tant que développeur web freelance, je crée des sites et applis sur mesure pour concrétiser vos idées en ligne.' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
@@ -32,7 +35,7 @@ export default defineNuxtConfig({
     'nuxt-aos',
   ],
   plugins : [
-    '~/plugins/aos.client.js',
+    { src: "@/plugins/aos.client", mode: "client" },
     '~/plugins/fontawesome.js',
     '~/plugins/splide.js',
   ],
