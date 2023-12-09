@@ -109,15 +109,15 @@ export default {
     <div id="menu" class="hidden flex items-center justify-center container bg-gold-200 w-screen h-screen" >
       <div class="flex flex-col items-center space-y-24 justify-center">
         <button>
-          <a :class="{ 'active-link': $route.path === '/' }" href="/" class="text-black-100 text-4xl font-semibold hover:text-white">Présentation
+          <a :class="{ 'active-link': $route.path === '/' }" href="/" class="text-black-100 text-3xl font-semibold hover:text-white">Présentation
           </a>
         </button>
         <button>
-          <a :class="{ 'active-link': $route.path === '/prestation' }" href="/prestation" class="text-black-100 text-4xl font-semibold hover:text-white">Prestations
+          <a :class="{ 'active-link': $route.path === '/prestation' }" href="/prestation" class="text-black-100 text-3xl font-semibold hover:text-white">Prestations
           </a>
         </button>
         <button>
-          <a :class="{ 'active-link': $route.path === '/realisation' }" href="/realisation" class="text-black-100 text-4xl font-semibold hover:text-white">Réalisations
+          <a :class="{ 'active-link': $route.path === '/realisation' }" href="/realisation" class="text-black-100 text-3xl font-semibold hover:text-white">Réalisations
           </a>
         </button>
         <button>
