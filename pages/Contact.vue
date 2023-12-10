@@ -12,7 +12,7 @@ const form = ref({
 const showSuccessMessage = ref(false);
 const handleSubmit = async () => {
   try {
-    const response = useFetch('/api/sendMail', {
+    const response = await useFetch('/api/sendMail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

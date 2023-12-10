@@ -12,13 +12,11 @@ export default defineEventHandler(async (event) => {
             },
             body: JSON.stringify(body),
         });
-
         if (response.ok) {
             // Retourne un objet avec success: true
             return { success: true };
         } else {
-            // Lance une erreur avec le code 400 si la réponse n'est pas "ok"
-            throw new Error('Bad Request');
+            return { success: false };
         }
     } catch (error) {
         // Log l'erreur pour le débogage
