@@ -9,29 +9,25 @@ const form = ref({
   message: ''
 });
 
-
-const config = useRuntimeConfig();
 const showSuccessMessage = ref(false);
-console.log(config)
 const handleSubmit = async () => {
   try {
-    const apiSecretKey = config.secret;
-    console.log(apiSecretKey)
-    const response = await fetch(apiSecretKey, {
-      method: "POST",
+    const response = useFetch('/api/sendMail', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(form.value),
-    });
+    })
 
-    if (response.ok) {
+    if (response.data.value.success) {
       showSuccessMessage.value = true;
       form.value = { email: '', message: '' };
       setTimeout(() => {
         showSuccessMessage.value = false;
       }, 5000);
-    } else {
+    }
+    else {
       alert("Une erreur s'est produite lors de l'envoi du formulaire.");
     }
   } catch (error) {
@@ -39,7 +35,6 @@ const handleSubmit = async () => {
     alert("Une erreur s'est produite lors de l'envoi du formulaire.");
   }
 };
-
 </script>
 
 <template>
