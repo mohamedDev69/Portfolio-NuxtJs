@@ -82,7 +82,7 @@ const handleSubmit = async () => {
 
     </section>
 
-    <div v-if="showSuccessMessage" class="mt-12 text-center">
+    <div v-if="showSuccessMessage" class="mt-12 text-center" data-aos="fade-bottom" data-aos-duration="500">
       <p class="text-gold-200 font-bold"> Le message à bien été envoyé, je vous répondrais  <br class="md:hidden"> dans les plus brefs délais !</p>
     </div>
 

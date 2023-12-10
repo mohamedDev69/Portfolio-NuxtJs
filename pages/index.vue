@@ -12,7 +12,8 @@
           <div class="xl:text-left text-center xl:mx-0" >
             <h1 class="2xl:text-7xl xl:text-5xl text-[38px] font-bold text-gold-200 md:mt-[60px] sm:mt-[80px] mt-[50px] info" >Développeur Web</h1>
             <h2 class="text-white mt-[50px] leading-8 2xl:text-2xl xl:text-1xl lg:text-[20px] text-[18px] ">
-              Transformez votre idée en un site web exceptionnel <br>  avec mon expertise  en développement web et création d'applications ! 🌐💡
+              Transformez votre idée en un site web exceptionnel <br class="sm:block hidden ">  avec
+              mon expertise  en développement web et création d'applications ! 🌐💡
             </h2>
             <a href="/documents/CV_Mohamed_Chettah.pdf" class="link-navbar text-gold-200 sm:text-2xl text-xl mt-[50px] hover:text-white" target="_blank">
               Télécharger CV
