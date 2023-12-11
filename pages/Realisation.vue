@@ -40,7 +40,7 @@ onUnmounted(() => {
     <div class=" flex justify-center mt-16 ml-6 " data-aos="fade-up" data-aos-duration="1000">
 
       <!-- Réalisation -->
-      <Splide class="container" :options="{ rewind: true,  perPage: pageCarousel , height : 700,gap: '4rem' }">
+      <Splide class="container" :options="{ speed : 1500, rewind: true,  perPage: pageCarousel , height : 700,gap: '4rem' }">
         <SplideSlide>
           <card-realisation
               type="Projet Professionel"
