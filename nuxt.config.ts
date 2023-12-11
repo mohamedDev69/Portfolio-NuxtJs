@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    private : {
+      API_SECRET_URL: process.env.NUXT_API_KEY,
+    }
+
+  },
   app: {
     head: {
       charset: 'utf-8',

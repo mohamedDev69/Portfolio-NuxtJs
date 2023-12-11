@@ -4,8 +4,10 @@ export default defineEventHandler(async (event) => {
     try {
         // Récupère le corps de la requête
         const body = await readBody(event);
+        const config = useRuntimeConfig();
+        const secretUrl = config.private.API_SECRET_URL;
 
-        const response = await fetch('https://formspree.io/f/mwkdbapb', {
+        const response = await fetch(secretUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
