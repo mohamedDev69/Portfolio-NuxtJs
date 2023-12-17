@@ -57,7 +57,7 @@ let listMaintenance = [
   <Navbar/>
   <div class="container">
 
-    <div id="prestations" class="2xl:mt-20 xl:mt-6 lg:mt-10 sm:mt-24 mt-16 pb:mb-0 pb-10 flex justify-center lg:items-stretch items-center gap-10 lg:flex-row flex-col">
+    <div id="prestations" class="2xl:mt-20 xl:mt-4 lg:mt-10 sm:mt-24 mt-16 xl:pb-2 pb-10 flex justify-center lg:items-stretch items-center gap-10 lg:flex-row flex-col">
 
       <!----------------------------------------------------------- Maquettage Design --------------------------------------------->
 
