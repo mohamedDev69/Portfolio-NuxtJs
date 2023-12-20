@@ -43,5 +43,4 @@ export default defineNuxtConfig({
     '~/plugins/splide.js',
   ],
 
-
 })

@@ -42,7 +42,7 @@ onUnmounted(() => {
       <!-- Réalisation -->
       <Splide class="container" :options="{ speed : 1500, rewind: true,  perPage: pageCarousel , height : 700,gap: '4rem' }">
         <SplideSlide>
-          <card-realisation
+          <card-realisation class="ml-16"
               type="Projet Professionel"
               img-src="/img/carousel-picture/crm-picture.jpg"
               img-alt="Image d'une CRM (Custom Relationship Manager) "
