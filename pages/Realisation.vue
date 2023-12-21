@@ -42,7 +42,7 @@ onUnmounted(() => {
       <!-- Réalisation -->
       <Splide class="container" :options="{ speed : 1500, rewind: true,  perPage: pageCarousel , height : 700,gap: '4rem' }">
         <SplideSlide>
-          <card-realisation class="ml-16"
+          <card-realisation class="xl:ml-16"
               type="Projet Professionel"
               img-src="/img/carousel-picture/crm-picture.jpg"
               img-alt="Image d'une CRM (Custom Relationship Manager) "
@@ -55,7 +55,8 @@ onUnmounted(() => {
         </SplideSlide>
 
         <SplideSlide>
-          <card-realisation type="Projet Scolaire"
+        <card-realisation   class="xl:ml-16"
+                            type="Projet Scolaire"
                             img-src="/img/carousel-picture/Frame%203.2.png"
                             img-alt="Image pour les grands écrans"
                             href="https://emmapierre.netlify.app/view/"
@@ -70,7 +71,8 @@ onUnmounted(() => {
         </SplideSlide>
 
         <SplideSlide>
-          <card-realisation type="Futur projet"
+          <card-realisation class="xl:ml-16"
+                            type="Futur projet"
                             img-src="/img/carousel-picture/prochainement.png"
                             img-alt="Image avec le mot prochainemen en son centre"
                             href="#"

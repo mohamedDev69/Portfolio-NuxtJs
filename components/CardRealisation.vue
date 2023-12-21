@@ -40,7 +40,7 @@ const props = defineProps ({
     </div>
     <div class="mt-16">
       <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px] xl:text-left text-center">Description : </h4>
-      <p class="text-white sm:px-0 px-14 text-center sm:mt-6 mt-10 leading-7 w-[450px] xl:text-left sm:text-[14px] text-[12px]" v-html="props.description"></p>
+      <p class="text-white md:px-0 sm:px-12 px-14 text-center sm:mt-6 mt-10 leading-7 w-[450px] xl:text-left md:text-[14px] text-[12px]" v-html="props.description"></p>
     </div>
   </div>
 </template>
