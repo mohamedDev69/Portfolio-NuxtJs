@@ -62,7 +62,7 @@ let listMaintenance = [
       <!----------------------------------------------------------- Maquettage Design --------------------------------------------->
 
       <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="1000"
-           class="cursor-pointer rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
+           class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
 
         <CardPrestation img-src="img/icones-prestation/web-design.png" title="Maquettage Design" :list-items="listDesign" img-alt="ecran design">
         </CardPrestation>
