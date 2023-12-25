@@ -55,7 +55,7 @@ onUnmounted(() => {
         </SplideSlide>
 
         <SplideSlide>
-        <card-realisation   class="xl:ml-16"
+        <card-realisation   class="xl:ml-10"
                             type="Projet Scolaire"
                             img-src="/img/carousel-picture/Frame%203.2.png"
                             img-alt="Image pour les grands écrans"
