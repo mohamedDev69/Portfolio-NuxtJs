@@ -1,5 +1,17 @@
 <script setup>
 
+let title = "Prestation"
+
+let description = "Découvrez les services de développement web que je propose en tant que développeur. De la conception à la réalisation, explorez mes offres de prestations adaptées à vos besoins pour donner vie à vos projets numériques."
+
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+
 import Navbar from "@/components/Navbar.vue";
 import CardPrestation from "@/components/CardPrestation.vue";
 

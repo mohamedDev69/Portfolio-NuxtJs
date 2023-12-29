@@ -1,5 +1,17 @@
 <script setup>
 
+let title = "Réalisation"
+
+let description = "Explorez mon portfolio de réalisations en développement web. Découvrez des projets variés illustrant mon expertise et ma créativité en tant que développeur freelance. Visitez pour vous inspirer et voir comment je peux transformer vos idées en réalité."
+
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+
 import Navbar from "@/components/Navbar.vue";
 
 import CardRealisation from "@/components/CardRealisation.vue";

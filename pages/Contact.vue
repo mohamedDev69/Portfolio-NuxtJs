@@ -1,8 +1,19 @@
 <script setup>
 
+let title = "Contact"
+
+let description = "Découvrez comment je peux aider à concrétiser vos projets web. En tant que développeur web freelance basé en France, je suis à votre disposition pour toute question ou pour discuter de vos idées. Visitez ma page de contact pour en savoir plus."
+
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+
 import Navbar from "@/components/Navbar.vue";
 import { ref } from 'vue';
-import { useRuntimeConfig } from 'nuxt/app';
 
 const form = ref({
   email: '',
