@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     private : {
       API_SECRET_URL: process.env.NUXT_API_KEY,
     }
-
   },
   app: {
     head: {
@@ -36,11 +35,11 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-aos',
+    'nuxt-simple-sitemap'
   ],
   plugins : [
     { src: "@/plugins/aos.client", mode: "client" },
     '~/plugins/fontawesome.js',
     '~/plugins/splide.js',
-  ],
-
+  ]
 })
