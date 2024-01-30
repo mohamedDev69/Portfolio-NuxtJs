@@ -18,47 +18,47 @@ import CardPrestation from "@/components/CardPrestation.vue";
 let listDesign = [
   {
     text: "Création d'un design moderne, attrayant et esthétiquement plaisant pour une présence en ligne professionnelle.",
-    icon: "fa-solid fa-palette",
+    icon: "fas fa-palette",
   },
   {
     text : "Conception de maquettes axées sur l'alignement avec les objectifs de marque et l'engagement des utilisateurs.",
-    icon : "fa-solid fa-pen-to-square",
+    icon : "fas fa-pen-to-square",
   },
   {
     text : "Processus de feedback itératif assurant que les designs finaux correspondent aux attentes des clients. ",
-    icon : "fa-solid fa-comments",
+    icon : "fas fa-comments",
   }
 ]
 
 let listDeveloppementWeb = [
   {
     text: "Développement personnalisé de sites web et d\'applications web responsive, répondant à vos besoins spécifiques.",
-    icon: "fa-solid fa-desktop",
-    icon2 : "fa-solid fa-mobile-screen"
+    icon: "fas fa-desktop",
+    icon2 : "fas fa-mobile-screen"
   },
   {
     text : "Optimisation de la performance et de la vitesse pour une expérience utilisateur fluide et réactive.",
-    icon : "fa-solid fa-tachometer-alt",
+    icon : "fas fa-tachometer-alt",
   },
   {
     text : "SEO amélioré : Des stratégies avancées pour augmenter votre visibilité en ligne. ",
-    icon : "fa-solid fa-search",
+    icon : "fas fa-search",
   }
 ]
 
 let listMaintenance = [
   {
     text: "Forfaits de maintenance personnalisables incluant surveillance des performances et sauvegardes régulières.",
-    icon: "fa-solid fa-tools",
+    icon: "fas fa-tools",
   },
   {
     text : "Services de refonte de sites web pour modernisation esthétique et fonctionnelle." +
         "                      ",
-    icon : "fa-solid fa-sync-alt",
+    icon : "fas fa-sync-alt",
   },
   {
     text : "Gestion de l\'hébergement de votre site ou application web pour une disponibilité et performance optimales en ligne.",
-    icon : "fa-solid fa-server",
+    icon : "fas fa-server",
   }
 ]
 
@@ -73,8 +73,7 @@ let listMaintenance = [
 
       <!----------------------------------------------------------- Maquettage Design --------------------------------------------->
 
-      <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="1000"
-           class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
+      <div class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
 
         <CardPrestation img-src="img/icones-prestation/web-design.png" title="Maquettage Design" :list-items="listDesign" img-alt="ecran design">
         </CardPrestation>
@@ -82,8 +81,7 @@ let listMaintenance = [
       </div>
       <!----------------------------------------------------------- Création de site Web / App web --------------------------------------------->
 
-      <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="1500"
-           class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
+      <div class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
 
         <CardPrestation img-src="img/icones-prestation/picture_website.png"
                         title="Développement Web"
@@ -96,7 +94,7 @@ let listMaintenance = [
 
       <!----------------------------------------------------------- Maintenance / Refonte --------------------------------------------->
 
-      <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="1500"
+      <div
            class="rounded overflow-hidden border-black-200 bg-black-200 border-2 2xl:w-[430px] xl:w-[500px] w-[350px] ">
 
         <CardPrestation img-src="img/icones-prestation/optimize.png"

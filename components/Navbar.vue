@@ -78,7 +78,7 @@ export default {
           </button>
         </div>
         <a href="/" class="cursor-pointer sm:ml-0 ml-10" v-if="logoVisible">
-          <img src="/img/logo-transparent.png" class="w-16" alt="logo_principal">
+          <NuxtImg src="/img/logo-transparent.png" class="w-16" alt="logo_principal" />
         </a>
         <div class="hidden lg:flex items-center space-x-4 lg:text-[19px] text-[16px] ">
           <a :class="{ 'active-link': $route.path === '/' }" href="/" class="text-gold-200 hover:text-white link-navbar">
@@ -90,18 +90,15 @@ export default {
           <a :class="{ 'active-link': $route.path === '/realisation' }" href="/realisation" class="text-gold-200 hover:text-white link-navbar">
             Réalisations
           </a>
-<!--          <a :class="{ 'active-link': $route.path === '/competences' }" href="/competences" class="text-gold-200 hover:text-white link-navbar">-->
-<!--            Compétences-->
-<!--          </a>-->
         </div>
 
-        <a id="contact" href="/contact" class="lg:text-[19px] text-[16px] border-2 border-black-200 text-black-200 font-bold rounded-lg p-2 bg-gold-200 hover:text-white">
+        <a id="contact" href="/contact" class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 lg:text-[19px] text-[16px] border-2 border-black-200 text-black-200 font-bold rounded-lg p-2 bg-gold-200 hover:text-white">
           Contacter
         </a>
       </div>
       <div class="xl:flex hidden justify-end" >
-        <div class="block mt-[-10px]" data-aos="fade-bottom" data-aos-duration="1500">
-          <img class="w-12 r ml-8"  src="/img/icones-prestation/arrow.png" alt="Arrow Icon">
+        <div class="block mt-[-10px]">
+          <NuxtImg class="w-12 r ml-8"  src="/img/icones-prestation/arrow.png" alt="Arrow Icon" />
           <p class="text-[18px] text-gold-200 font-bold">N'hésitez pas</p>
         </div>
       </div>
@@ -119,10 +116,6 @@ export default {
         <button>
           <a :class="{ 'active-link': $route.path === '/realisation' }" href="/realisation" class="text-black-100 text-3xl font-semibold hover:text-white">Réalisations
           </a>
-        </button>
-        <button>
-<!--          <a :class="{ 'active-link': $route.path === '/competences' }" href="/competences"  class="text-black-100 text-4xl font-semibold hover:text-white">Compétences-->
-<!--          </a>-->
         </button>
 
       </div>

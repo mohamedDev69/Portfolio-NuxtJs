@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  image: {
+    // Options
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/main.css','@fortawesome/fontawesome-svg-core/styles.css'],
   postcss: {
@@ -34,12 +37,15 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    'nuxt-aos',
-    'nuxt-simple-sitemap'
+    'nuxt-simple-sitemap',
+    '@nuxt/image'
   ],
   plugins : [
-    { src: "@/plugins/aos.client", mode: "client" },
     '~/plugins/fontawesome.js',
     '~/plugins/splide.js',
-  ]
+  ],
+  build: {
+    transpile: ['@fortawesome/vue-fontawesome']
+  },
 })
+

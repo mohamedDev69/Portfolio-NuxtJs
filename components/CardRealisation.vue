@@ -1,5 +1,7 @@
 <script setup>
 
+import BlocApparition from "~/components/BlocApparition.vue";
+
 const props = defineProps ({
     imgSrc: {
       type: String,
@@ -34,13 +36,15 @@ const props = defineProps ({
     <div class="mt-6">
       <div class="overflow-hidden aspect-w-16 aspect-h-9 ">
         <a :target="props.target" :href="props.href">
-          <img :src="imgSrc" :alt="props.imgAlt" class="2xl:w-[350px] md:w-[280px] w-[200px] rounded-lg hover:rounded-lg transition ease-in-out hover:scale-110 duration-700" >
+          <NuxtImg :src="imgSrc" :alt="props.imgAlt" class="2xl:w-[350px] md:w-[280px] w-[200px] rounded-lg hover:rounded-lg transition ease-in-out hover:scale-110 duration-700" />
         </a>
       </div>
     </div>
     <div class="mt-16">
       <h4 class="font-bold text-gold-200 lg:text-xl sm:text-[18px] text-[16px] xl:text-left text-center">Description : </h4>
-      <p class="text-white md:px-0 sm:px-12 px-14 text-center sm:mt-6 mt-10 leading-7 w-[450px] xl:text-left md:text-[14px] text-[12px]" v-html="props.description"></p>
+      <bloc-apparition>
+        <p class="text-white md:px-0 sm:px-12 px-14 text-center sm:mt-6 mt-10 leading-7 2xl:w-[570px] w-[450px] xl:text-left md:text-[14px] text-[12px] " v-html="props.description"></p>
+      </bloc-apparition>
     </div>
   </div>
 </template>
