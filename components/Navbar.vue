@@ -1,65 +1,61 @@
-<script>
+<script setup>
+import { ref } from 'vue';
+import anime from 'animejs';
 
-import anime from "animejs";
+// Data
+const logoVisible = ref(true);
+const colorCross = ref('#F0BF6C');
 
-export default {
-  data() {
-    return {
-      logoVisible: true,
-      colorCross : '#F0BF6C',
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.colorCross = '#31333b'
-      this.animateMenu("burger", "cross", 45, 0, 0.8, 1);
-      document.body.style.overflow = 'hidden';
-      document.body.style.background = '#F0BF6C';
-      this.logoVisible = false
-    },
+// Methods
+const toggleMenu = () => {
+  colorCross.value = '#31333b';
+  animateMenu("burger", "cross", 45, 0, 0.8, 1);
+  document.body.style.overflow = 'hidden';
+  document.body.style.background = '#F0BF6C';
+  logoVisible.value = false;
+};
 
-    closeMenu() {
-      this.colorCross = '#F0BF6C'
-      this.animateMenu("cross", "burger", 45, 0, 1, 0.8);
-      document.body.style.overflow = 'auto';
-      document.body.style.background = '';
-      this.logoVisible = true
-    },
+const closeMenu = () => {
+  colorCross.value = '#F0BF6C';
+  animateMenu("cross", "burger", 45, 0, 1, 0.8);
+  document.body.style.overflow = 'auto';
+  document.body.style.background = '';
+  logoVisible.value = true;
+};
 
-    animateMenu(hideTarget, showTarget, rotateStart, rotateEnd, scaleStart, scaleEnd) {
-      const menu = document.querySelector("#menu");
-      const hideBtn = document.querySelector(`#btn-navbar-${hideTarget}`);
-      const showBtn = document.querySelector(`#btn-navbar-${showTarget}`);
+const animateMenu = (hideTarget, showTarget, rotateStart, rotateEnd, scaleStart, scaleEnd) => {
+  const menu = document.querySelector("#menu");
+  const hideBtn = document.querySelector(`#btn-navbar-${hideTarget}`);
+  const showBtn = document.querySelector(`#btn-navbar-${showTarget}`);
 
-      menu.classList.toggle("hidden");
+  menu.classList.toggle("hidden");
+
+  anime({
+    targets: hideBtn,
+    opacity: 0,
+    scale: scaleStart,
+    rotate: rotateStart,
+    translateX: 10,
+    duration: 300,
+    easing: 'easeInOutQuad',
+    complete: () => {
+      hideBtn.classList.toggle("hidden");
+      showBtn.classList.remove("hidden");
 
       anime({
-        targets: hideBtn,
-        opacity: 0,
-        scale: scaleStart,
-        rotate: rotateStart,
-        translateX: 10,
+        targets: showBtn,
+        opacity: 1,
+        scale: scaleEnd,
+        rotate: rotateEnd,
+        translateX: 0,
         duration: 300,
         easing: 'easeInOutQuad',
-        complete: () => {
-          hideBtn.classList.toggle("hidden");
-          showBtn.classList.remove("hidden");
-
-          anime({
-            targets: showBtn,
-            opacity: 1,
-            scale: scaleEnd,
-            rotate: rotateEnd,
-            translateX: 0,
-            duration: 300,
-            easing: 'easeInOutQuad',
-          });
-        }
       });
-    },
-  }
-}
+    }
+  });
+};
 </script>
+
 
 <template>
   <div>

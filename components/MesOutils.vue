@@ -4,29 +4,88 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 function animateIconsTools(){
   anime({
-    targets: '.splide__slide',
+    targets: '#html5',
     opacity: [0, 1],
     translateY: [75, 0],
     easing: 'easeOutQuad',
     duration: 1000,
     delay: 250,
   });
-}
-function animateIcon(target, delay) {
   anime({
-    targets: target,
-    easing: 'easeOutSine',
-    translateY: 100,
-    opacity: 1,
-    delay: delay
+    targets: '#tailwind',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 500,
+  });
+  anime({
+    targets: '#php',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 750,
+  });
+  anime({
+    targets: '#laravel',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 1000,
+  });
+  anime({
+    targets: '#vuejs',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 1250,
+  });
+  anime({
+    targets: '#nuxt',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 1500,
+  });
+  anime({
+    targets: '#github',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 1750,
+  });
+  anime({
+    targets: '#phpstorm',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 2000,
+  });
+  anime({
+    targets: '#figma',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 2250,
+  });
+  anime({
+    targets: '#notion',
+    opacity: [0, 1],
+    translateY: [75, 0],
+    easing: 'easeOutQuad',
+    duration: 1000,
+    delay: 2500,
   });
 }
 
-
 onMounted(() => {
-  animateIcon("#icon-github", 200);
-  animateIcon("#icon-linkedin", 400);
-  animateIcon("#icon-mail", 600);
   animateIconsTools()
 });
 
@@ -47,18 +106,18 @@ onMounted(() => {
       <div class="flex lg:gap-20 gap-3 mt-12">
 
         <div class="lg:flex lg:gap-20 gap-10 lg:mx-0 mx-auto">
-          <img class="md:w-24 w-16" src="/img/logos/html.png" alt="html logo">
-          <a target="_blank" href="https://tailwindcss.com/"><img class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/tailwind.png" alt="tailwind logo"></a>
+          <img id="html5" class="md:w-24 w-16" src="/img/logos/html.png" alt="html logo">
+          <a target="_blank" href="https://tailwindcss.com/"><img id="tailwind" class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/tailwind.png" alt="tailwind logo"></a>
         </div>
 
         <div class="lg:flex md:gap-20 gap-10 lg:mx-0 mx-auto">
-          <a target="_blank" href="https://www.php.net/"><img class="md:w-24 w-16" src="/img/logos/php.png" alt="php logo"></a>
-          <a target="_blank" href="https://laravel.com/"><img class="md:w-24 w-16 lg:mt-0 mt-10 " src="/img/logos/laravel.png" alt="laravel logo"></a>
+          <a target="_blank" href="https://www.php.net/"><img id="php" class="md:w-24 w-16" src="/img/logos/php.png" alt="php logo"></a>
+          <a target="_blank" href="https://laravel.com/"><img id="laravel" class="md:w-24 w-16 lg:mt-0 mt-10 " src="/img/logos/laravel.png" alt="laravel logo"></a>
         </div>
 
         <div class="lg:flex md:gap-20 gap-10 lg:mx-0 mx-auto">
-          <a target="_blank" href="https://vuejs.org/"><img class="md:w-24 w-16 " src="/img/logos/vuejs.png" alt="vuejs logo"></a>
-          <a target="_blank" href="https://nuxt.com/"><img class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/nuxt.png" alt="nuxt logo"></a>
+          <a target="_blank" href="https://vuejs.org/"><img id="vuejs" class="md:w-24 w-16 " src="/img/logos/vuejs.png" alt="vuejs logo"></a>
+          <a target="_blank" href="https://nuxt.com/"><img id="nuxt" class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/nuxt.png" alt="nuxt logo"></a>
         </div>
 
 
@@ -70,13 +129,13 @@ onMounted(() => {
       <div class="flex lg:gap-32 gap-5 mt-10" >
 
         <div class="lg:flex lg:gap-32 gap-10 lg:mx-0 mx-auto">
-          <a target="_blank" href="https://github.com/"><img class="md:w-24 w-16" src="/img/logos/mdi_github.png" alt="github logo"></a>
-          <a target="_blank" href="https://www.jetbrains.com/fr-fr/phpstorm/"><img class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/devicon-plain_phpstorm.png" alt="php storm logo"></a>
+          <a target="_blank" href="https://github.com/"><img id="github" class="md:w-24 w-16" src="/img/logos/mdi_github.png" alt="github logo"></a>
+          <a target="_blank" href="https://www.jetbrains.com/fr-fr/phpstorm/"><img id="phpstorm" class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/devicon-plain_phpstorm.png" alt="php storm logo"></a>
         </div>
 
         <div class="lg:flex md:gap-32 gap-10 lg:mx-0 mx-auto">
-          <a target="_blank" href="https://www.figma.com/fr/"><img class="md:w-24 w-16" src="/img/logos/solar_figma-bold-duotone.png" alt="figma logo"></a>
-          <a target="_blank" href="https://www.notion.so/fr-fr"><img class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/simple-icons_notion.png" alt="notion logo"></a>
+          <a target="_blank" href="https://www.figma.com/fr/"><img id="figma" class="md:w-24 w-16" src="/img/logos/solar_figma-bold-duotone.png" alt="figma logo"></a>
+          <a target="_blank" href="https://www.notion.so/fr-fr"><img id="notion" class="md:w-24 w-16 lg:mt-0 mt-10" src="/img/logos/simple-icons_notion.png" alt="notion logo"></a>
         </div>
 
       </div>
