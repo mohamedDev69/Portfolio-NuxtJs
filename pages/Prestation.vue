@@ -1,5 +1,22 @@
 <script setup>
 
+import { onMounted } from 'vue';
+import anime from "animejs";
+
+function animateCard(){
+  anime({
+    targets: '.card-prestation',
+    opacity: [0, 1],
+    easing: 'easeInSine',
+    duration: 1000,
+  });
+}
+
+onMounted(() => {
+  animateCard();
+});
+
+
 let title = "Prestation"
 
 let description = "Découvrez les services de développement web que je propose en tant que développeur. De la conception à la réalisation, explorez mes offres de prestations adaptées à vos besoins pour donner vie à vos projets numériques."
@@ -67,7 +84,7 @@ let listMaintenance = [
 <template>
   <div>
   <Navbar/>
-  <div class="container">
+  <div class="container card-prestation opacity-0">
 
     <div id="prestations" class="2xl:mt-20 xl:mt-4 lg:mt-10 sm:mt-24 mt-16 xl:pb-2 pb-10 flex justify-center lg:items-stretch items-center gap-10 lg:flex-row flex-col">
 

@@ -2,6 +2,8 @@
 import anime from "animejs";
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const isContentVisible = ref(false);
+const revealContainer = ref(null);
 function animateIconsTools(){
   anime({
     targets: '#html5',
@@ -86,20 +88,27 @@ function animateIconsTools(){
 }
 
 onMounted(() => {
-  animateIconsTools()
+  const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isContentVisible.value) {
+          animateIconsTools()
+          isContentVisible.value = true;
+        }
+      },
+      { threshold: 0.40 } // Trigger when 40% of the element is in view
+  );
+
+  observer.observe(revealContainer.value);
+
 });
-
-
 
 </script>
 
 <template>
 
-  <div class="sm:mt-32 mt-40 mb-32">
-
+  <div :style="{ overflow: 'hidden' }" ref="revealContainer" class="sm:mt-32 mt-40 mb-32 parent_outils">
 
       <h2 class="sm:text-3xl text-2xl text-gold-200 font-bold sm:text-left text-center"> Mes Outils </h2>
-
 
     <div class="ml-6 sm:mt-16 mt-20">
       <h3 class="text-gold-200 font-bold sm:text-2xl text-xl lg:text-left text-center "> Développement Web</h3>
@@ -145,5 +154,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+.parent_outils img {
+  opacity: 0;
+}
 
 </style>

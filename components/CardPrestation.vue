@@ -24,7 +24,7 @@ const props = defineProps( {
 </script>
 
 <template>
-   <div class="2xl:p-14 p-10 flex flex-col items-center">
+  <div class="2xl:p-14 p-10 flex flex-col items-center card-prestation">
      <NuxtImg class="2xl:w-[100px] xl:w-[90px] md:w-[80px] w-24 mb-10" :src="props.imgSrc" :alt="props.imgAlt" />
 
      <h3 class="text-gold-200 font-bold 2xl:text-xl xl:text-[18px] md:text-[16px] mb-10 text-center md:block" v-html="props.title"></h3>
